@@ -48,16 +48,16 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'],screenshot: "on", video: "on", trace: "on", headless: false, baseURL: 'https://www.demoblaze.com/index.html',       },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'],screenshot: "on", video: "on", trace: "on", headless: false, baseURL: 'https://www.demoblaze.com/index.html',       },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'],screenshot: "on", video: "on", trace: "on", headless: false, baseURL: 'https://www.demoblaze.com/index.html',       },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'],screenshot: "on", video: "on", trace: "on", headless: false, baseURL: 'https://www.demoblaze.com/index.html',   },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'],screenshot: "on", video: "on", trace: "on", headless: false, baseURL: 'https://www.demoblaze.com/index.html',   },
     
-    // },
+    },
 
     /* Test against mobile viewports. */
     // {
