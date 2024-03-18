@@ -1,0 +1,29 @@
+Run Specific File
+npx playwright test ./tests/loginlogout.spec.js
+
+Run all test/File
+npx playwright test
+
+Run on specific project
+
+npx playwright test ./tests/loginlogout.spec.js --project=Webkit
+npx playwright test ./tests/loginlogout.spec.js --project=Chromium
+npx playwright test ./tests/loginlogout.spec.js --project=firefox
+
+Serial Mode
+Will run test in serial mode and if test fails next all will be skipped
+
+test.describe.configure({mode:"serial"})
+
+Retry
+retries: 2 (total 3 2retry+MainTest)
+
+Flaky means first time failing while retrying it is passing
+
+timeout: 30 * 1000,
+
+Run all test with new config file
+
+npx playwright test ./tests/loginlogout.spec.js --config=playwright1.config.js
+
+Refrence for Excel - For playwright Recommended JSON File
