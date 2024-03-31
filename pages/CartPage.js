@@ -3,7 +3,6 @@ exports.CartPage = class CartPage {
     constructor(page) {
         this.page = page;
         this.noOfProducts = page.locator('//tbody[@id="tbodyid"]//child::td[2]');
-        this.noOfProductdeleteLinks = page.getByText("Delete");
         this.noOfProductdeleteLinks = page.locator('//tbody[@id="tbodyid"]//child::td[4]');
         this.placeOrderButton = page.getByRole('button', { name: 'Place Order' });
         this.nameInput = page.locator('#name');
@@ -59,6 +58,7 @@ exports.CartPage = class CartPage {
             await this.page.waitForLoadState("networkidle");
             count++;
         }
+        await this.page.waitForTimeout(3000); 
         return await this.noOfProductdeleteLinks;
     }
 
