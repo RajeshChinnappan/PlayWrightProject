@@ -12,10 +12,10 @@ pipeline {
 
    post {
             emailext (
-                 to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
-               //  subject: "Build ${currentBuild.fullDisplayName} Status",
-               //  body: "Build Status",
-               //  attachLog: true,
+                to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
+                subject: "Build ${currentBuild.fullDisplayName} Status",
+                body: "Build Status",
+                attachLog: true,
             )
         }
     }
