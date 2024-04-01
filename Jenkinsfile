@@ -1,19 +1,11 @@
 pipeline {
-
- agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                // Install dependencies and build Playwright project
-                sh 'npm ci'
-            }
-        }
-        stage('Test') {
-            steps {
-                // Run Playwright tests
-                sh 'npx playwright test'
-            }
-        }
-    }
+   agent { docker { image 'mcr.microsoft.com/playwright:v1.42.1-jammy' } }
+   stages {
+      stage('e2e-tests') {
+         steps {
+            sh 'npm ci'
+            sh 'npx playwright test'
+         }
+      }
+   }
 }
