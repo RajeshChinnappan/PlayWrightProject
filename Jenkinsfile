@@ -11,7 +11,7 @@ pipeline {
       
 post {
    success{
-           emailext(body: 'allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+           emailext(body: '${FILE,path="playwright-report/index.html.html"}', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
