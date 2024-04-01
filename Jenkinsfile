@@ -11,7 +11,7 @@ pipeline {
       
 post {
    success{
-           emailext(body: '${FILE,path="playwright-report/index.html"}', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+           emailext(attachmentsPattern:'playwright-report/index.html', body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
