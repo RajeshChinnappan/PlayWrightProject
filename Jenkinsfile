@@ -12,11 +12,10 @@ pipeline {
 
    post {
             emailext (
-                to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
-                subject: "Build ${currentBuild.fullDisplayName} Status",
-                body: "Build Status",
-                attachLog: true,
-                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+                 to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
+               //  subject: "Build ${currentBuild.fullDisplayName} Status",
+               //  body: "Build Status",
+               //  attachLog: true,
             )
         }
     }
