@@ -7,17 +7,13 @@ pipeline {
             bat 'npx playwright test'
          }
       }
-
    }
-
-   post {
-            emailext (
-                to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
-                subject: "Build ${currentBuild.fullDisplayName} Status",
-                body: "Build Status",
-                attachLog: true,
-            )
+      
+post {
+           emailext(body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
+
+   
     }
 
 
