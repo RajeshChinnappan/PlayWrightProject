@@ -10,9 +10,10 @@ pipeline {
    }
       
 post {
+   success{
            emailext(body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
-
+}
    
     }
 
