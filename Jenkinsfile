@@ -11,13 +11,7 @@ pipeline {
    }
 
    post {
-            emailext (
-                to: 'recipient@example.com',
-                subject: "Build ${currentBuild.fullDisplayName} Status",
-                body: "Build Status",
-                attachLog: true,
-                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-            )
+           emailext body: '', subject: '', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com'
         }
     }
 
