@@ -11,7 +11,7 @@ pipeline {
       
 post {
    success{
-           emailext(attachmentsPattern:'playwright-report/index.html', body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+           emailext(attachmentsPattern:'allure-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
