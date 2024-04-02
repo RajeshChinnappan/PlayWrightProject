@@ -8,15 +8,15 @@ pipeline {
          }
       }
    }
-      
-post {
-   always {
-                script {
-                def reportPath = "${WORKSPACE}/playwright-report/index.html"
-                echo "HTML report path: ${reportPath}"
 
-            }
-           emailext(body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+post {
+   always{
+      script {
+         allure ([
+            includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+         ])
+      }
+           emailext(attachmentsPattern:'http://localhost:8080/job/PlayWrightEndToEndTesting/ws/allure-report/index.html',body: '''${SCRIPT, template="allure-report.groovy"}''', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
