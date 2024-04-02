@@ -16,7 +16,7 @@ post {
             includeProperties: false, jdk: '', results: [[path: 'allure-results']]
          ])
       }
-           emailext(attachmentsPattern:'http://localhost:8080/job/PlayWrightEndToEndTesting/ws/allure-report/index.html',body: '''${SCRIPT, template="allure-report.groovy"}''', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+           emailext(attachmentsPattern:'allure-report/index.html',body: '''${SCRIPT, template="allure-report.groovy"}''', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
