@@ -7,7 +7,7 @@ pipeline {
       //       bat 'npx playwright test'
       //    }
        }
-   }
+   
 
 post {
    always{
@@ -23,7 +23,7 @@ post {
           
         }
 }
-   
-    }
+}
+    
 
 
