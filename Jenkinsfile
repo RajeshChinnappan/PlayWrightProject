@@ -12,9 +12,9 @@ pipeline {
 post {
    always{
       script {
-         def allureReportUrl = "${env.BUILD_URL}allure"
+         def allureReportUrl = '$BUILD_URL+allure'
          allure ([
-            includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            includeProperties: false, jdk: '', results: [[path: 'buildallure-results']]
             
          ])
           emailext(body: 'PLease find the Allure report at: ${allureReportUrl}', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
