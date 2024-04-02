@@ -16,7 +16,7 @@ post {
          // allure ([
          //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
          // ])
-       html_body = sh(script: "cat C://Users//rajesh.c//.jenkins//workspace//PlaywrightProjectEndToEndTesting//playwright-report//index.html", returnStdout: true).trim()
+       html_body = bat(script: "type C://Users//rajesh.c//.jenkins//workspace//PlaywrightProjectEndToEndTesting//playwright-report//index.html", returnStdout: true).trim()
 
 
        //  echo html_body
