@@ -20,7 +20,7 @@ post {
 
       emailext replyTo: '$DEFAULT_REPLYTO',
        subject: "subject",
-       to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com',
+       to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',
        mimeType: 'text/html',
        body: html_body
         // echo html_body
