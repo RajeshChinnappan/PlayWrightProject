@@ -14,10 +14,11 @@ post {
       script {
 
          allure ([
-            includeProperties: false, jdk: '', results: [[path: 'allure-results']]
-            
+            includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
          ])
-          emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+         html_body = sh(script: "cat playwright-report/index.html", returnStdout: true).trim()
+         echo html_body
+         // emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       }
           
         }
