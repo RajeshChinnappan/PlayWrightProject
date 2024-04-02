@@ -16,7 +16,7 @@ post {
             includeProperties: false, jdk: '', results: [[path: 'allure-results']]
          ])
       }
-           emailext(attachmentsPattern:[[path: 'allure-results']],body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+           emailext(attachmentsPattern:'allure-report.zip',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
         }
 }
    
