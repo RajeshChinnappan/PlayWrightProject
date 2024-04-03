@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 03 18:44:44 IST 2024","Wed Apr 03 18:44:45 IST 2024","1354","chromium","AddProductsToCartAPITest.spec.js","","","","Verify user is able to delete products from cart",""
+"passed","Wed Apr 03 18:44:50 IST 2024","Wed Apr 03 18:45:14 IST 2024","24285","chromium","AddProductsToCartTest.spec.js","","","","Verify user is able to add products to cart",""
+"passed","Wed Apr 03 18:44:42 IST 2024","Wed Apr 03 18:44:44 IST 2024","1845","chromium","AddProductsToCartAPITest.spec.js","","","","Verify user is able to add products to carts",""
+"passed","Wed Apr 03 18:44:43 IST 2024","Wed Apr 03 18:44:50 IST 2024","7441","chromium","AddProductsToCartTest.spec.js","","","","Verify user is able to log into app",""
+"passed","Wed Apr 03 18:45:18 IST 2024","Wed Apr 03 18:45:31 IST 2024","12972","chromium","AddProductsToCartTest.spec.js","","","","Verify user is able to delete the added products in cart",""
+"passed","Wed Apr 03 18:45:14 IST 2024","Wed Apr 03 18:45:18 IST 2024","3876","chromium","AddProductsToCartTest.spec.js","","","","Verify user is able to place order",""

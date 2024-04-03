@@ -1,0 +1,3 @@
+Product List [object Object]
+ProductName Nexus 6
+ProductName Samsung galaxy s6

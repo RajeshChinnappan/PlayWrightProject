@@ -18,15 +18,15 @@ test.beforeAll(() => {
     deleteNokiaLumina1520Payload = payloads.deleteToCartNokiaLumina1520Payload;
 });
 
-// test("Verify user is able to add products to carts", async ({ request }) => {
-//      apiClinet = new ApiClient(request);
-//     await apiClinet.makeRequest({ endPoint: endpoints.addToCart, data: { createSamsungGalaxyS6Payload, createNokiaLumina1520Payload }, responseStatus: 200 });
-// });
+test("Verify user is able to add products to carts", async ({ request }) => {
+     apiClinet = new ApiClient(request);
+    await apiClinet.makeRequest({ endPoint: endpoints.addToCart, data: { createSamsungGalaxyS6Payload, createNokiaLumina1520Payload }, responseStatus: 200 });
+});
 
-// test("Verify user is able to delete products from cart", async ({ request }) => {
-//      apiClinet = new ApiClient(request);
-//     await apiClinet.makeRequest({ endPoint: endpoints.addToCart, data: { deleteSamsungGalaxyS6Payload, deleteNokiaLumina1520Payload }, responseStatus: 200 });
-// });
+test("Verify user is able to delete products from cart", async ({ request }) => {
+     apiClinet = new ApiClient(request);
+    await apiClinet.makeRequest({ endPoint: endpoints.addToCart, data: { deleteSamsungGalaxyS6Payload, deleteNokiaLumina1520Payload }, responseStatus: 200 });
+});
 
 
 
