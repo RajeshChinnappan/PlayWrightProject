@@ -17,12 +17,8 @@ post {
          //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
          // ])
        def html_body = bat(script: "type C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html", returnStdout: true).trim()
-
-       emailext replyTo: '$DEFAULT_REPLYTO',
-       subject: "subject",
-       to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',
-       mimeType: 'html',
-       body: "${html_body}"
+         echo html_body
+       emailext(subject: "subject",to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',mimeType: 'html',body: "${html_body}")
         // echo html_body
          // emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       }
