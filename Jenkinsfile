@@ -30,7 +30,7 @@ post {
                         await browser.close();
                     })();
                 """
-                writeFile file: 'htmlToImage.js', text: htmlToImage
+              //  writeFile file: 'htmlToImage.js', text: htmlToImage
               //  bat 'npm install playwright'
              //   bat 'node htmlToImage.js'
                 echo 'screenshot.png'
