@@ -26,7 +26,7 @@ post {
                         const browser = await chromium.launch();
                         const page = await browser.newPage();
                         await page.goto('file://${reportPath}');
-                        await page.screenshot({ path: 'screenshot/screenshot.png' });
+                        await page.screenshot({ path: 'screenshots/screenshot.png' });
                         await browser.close();
                     })();
                 """
