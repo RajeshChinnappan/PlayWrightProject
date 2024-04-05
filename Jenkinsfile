@@ -31,8 +31,8 @@ post {
                     })();
                 """
                 writeFile file: 'htmlToImage.js', text: htmlToImage
-                bat 'npm install playwright'
-                bat 'node htmlToImage.js'
+              //  bat 'npm install playwright'
+             //   bat 'node htmlToImage.js'
                 echo 'screenshot.png'
       // emailext(subject: "Subject",to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',mimeType: 'text/html',body: "${html_body}")
         // echo html_body
