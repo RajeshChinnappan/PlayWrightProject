@@ -16,7 +16,9 @@ post {
          // allure ([
          //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
          // ])
-         def reportPath = "C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html";
+        // def reportPath = "C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html";
+         def reportPath = "${WORKSPACE}/playwright-report/index.html"
+
       // def html_body = bat(script: "type C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html", returnStdout: true).trim()
          echo reportPath
          def htmlToImage = """
