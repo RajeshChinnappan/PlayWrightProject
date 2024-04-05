@@ -26,13 +26,13 @@ post {
                         const browser = await chromium.launch();
                         const page = await browser.newPage();
                         await page.goto('file://${reportPath}');
-                        await page.screenshot({ path: 'screenshots/screenshot.png' });
+                        await page.screenshot({ path: 'screenshot.png' });
                         await browser.close();
                     })();
                 """
-              //  writeFile file: 'htmlToImage.js', text: htmlToImage
-              //  bat 'npm install playwright'
-             //   bat 'node htmlToImage.js'
+               writeFile file: 'htmlToImage.js', text: htmlToImage
+            //   bat 'npm install playwright'
+               bat 'node htmlToImage.js'
                 echo 'screenshot.png'
       // emailext(subject: "Subject",to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',mimeType: 'text/html',body: "${html_body}")
         // echo html_body
