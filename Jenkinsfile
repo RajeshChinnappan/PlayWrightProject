@@ -4,7 +4,7 @@ pipeline {
       stage('e2e-tests') {
          steps {
            bat 'npm ci'
-         //   bat 'npx playwright test'
+            bat 'npx playwright test'
          }
        }
   }
