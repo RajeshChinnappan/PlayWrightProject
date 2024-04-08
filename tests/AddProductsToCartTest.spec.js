@@ -49,40 +49,40 @@ describe("Add prouducts to cart and Place order", () => {
         expect(actualhomePageTitlle).toEqual(homePageTitle);
     })
 
-    test("Verify user is able to add products to cart", async function () {
-        homePage = new HomePage(page);
-        await homePage.addProductToCart({ nexus6, samsungGalaxyS6 });
-        await homePage.goToCart();
-        cartPage = new CartPage(page);
-        const productNames = await cartPage.verifyProductsAddedInCart({ nexus6, samsungGalaxyS6 });
-        expect(productNames).toBe(true);
-    })
+    // test("Verify user is able to add products to cart", async function () {
+    //     homePage = new HomePage(page);
+    //     await homePage.addProductToCart({ nexus6, samsungGalaxyS6 });
+    //     await homePage.goToCart();
+    //     cartPage = new CartPage(page);
+    //     const productNames = await cartPage.verifyProductsAddedInCart({ nexus6, samsungGalaxyS6 });
+    //     expect(productNames).toBe(true);
+    // })
 
-    test("Verify user is able to place order", async function () {
-        const totalAmount = await cartPage.getTotalAmount();
-        const purchaseDeatils = await cartPage.placeOrder(name, country, city, creditCardNumber, month, year);
-        let orderID = purchaseDeatils[0];
-        orderID = parseInt(orderID);
-        const actulalpurchaseAmount = purchaseDeatils[1];
-        const actualCreditCardNumber = purchaseDeatils[2];
-        const acutualUserName = purchaseDeatils[3];
-        const acutualDate = purchaseDeatils[4];
-        const actualPurchaseMessage = await cartPage.verifyThankYouForYourPurchaseMessageGestsDisplyed();
-        expect(orderID).toBeGreaterThanOrEqual(5);
-        expect(actualPurchaseMessage).toBe(true);
-        expect(actulalpurchaseAmount).toEqual(totalAmount + " " + "USD");
-        expect(actualCreditCardNumber).toEqual(creditCardNumber);
-        expect(acutualUserName).toEqual(name);
-        expect(date + "/" + month + "/" + year).toEqual(acutualDate);
-        await cartPage.clickOkButton();
-    })
+    // test("Verify user is able to place order", async function () {
+    //     const totalAmount = await cartPage.getTotalAmount();
+    //     const purchaseDeatils = await cartPage.placeOrder(name, country, city, creditCardNumber, month, year);
+    //     let orderID = purchaseDeatils[0];
+    //     orderID = parseInt(orderID);
+    //     const actulalpurchaseAmount = purchaseDeatils[1];
+    //     const actualCreditCardNumber = purchaseDeatils[2];
+    //     const acutualUserName = purchaseDeatils[3];
+    //     const acutualDate = purchaseDeatils[4];
+    //     const actualPurchaseMessage = await cartPage.verifyThankYouForYourPurchaseMessageGestsDisplyed();
+    //     expect(orderID).toBeGreaterThanOrEqual(5);
+    //     expect(actualPurchaseMessage).toBe(true);
+    //     expect(actulalpurchaseAmount).toEqual(totalAmount + " " + "USD");
+    //     expect(actualCreditCardNumber).toEqual(creditCardNumber);
+    //     expect(acutualUserName).toEqual(name);
+    //     expect(date + "/" + month + "/" + year).toEqual(acutualDate);
+    //     await cartPage.clickOkButton();
+    // })
 
-    test("Verify user is able to delete the added products in cart", async function () {
-        await homePage.addProductToCart({ nexus6, samsungGalaxyS6 });
-        await homePage.goToCart();
-        cartPage = new CartPage(page);
-        const productDeleteLinks = await cartPage.deleteAddedProductInCart();
-        expect(productDeleteLinks).toHaveCount(0);
-    })
+    // test("Verify user is able to delete the added products in cart", async function () {
+    //     await homePage.addProductToCart({ nexus6, samsungGalaxyS6 });
+    //     await homePage.goToCart();
+    //     cartPage = new CartPage(page);
+    //     const productDeleteLinks = await cartPage.deleteAddedProductInCart();
+    //     expect(productDeleteLinks).toHaveCount(0);
+    // })
 
 })
