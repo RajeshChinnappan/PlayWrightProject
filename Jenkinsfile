@@ -14,9 +14,9 @@ post {
       script {
      //    def reportPath = "${WORKSPACE}/playwright-report/index.html"
        //  def crumb = sh(script: "curl -s 'http://localhost:8080/crumbIssuer/api/xml' | grep -oP '(?<=<crumb>).*(?=</crumb>)'", returnStdout: true).trim()
-                def screenshotPath = "${WORKSPACE}/screenshots/screenshot.png"
+                def screenshotPath = "${WORKSPACE}/ws/screenshots/screenshot.png"
 
-                sh "chromium-browser --headless --screenshot=${screenshotPath} ${BUILD_URL}/Workspaces/C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/playwright-report/index.html"
+                sh "chromium-browser --headless --screenshot=${screenshotPath} ${BUILD_URL}/ws/C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/playwright-report/index.html"
          
 // emailext (
 
