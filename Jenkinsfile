@@ -8,6 +8,23 @@ pipeline {
          }
        }
   }
+stage('Take Screenshot') {
+
+            steps {
+
+                script {
+
+                     bat 'apt-get update && apt-get install -y chromium-browser'
+ 
+                    bat 'chromium-browser --headless --disable-gpu --screenshot=${WORKSPACE}/screenshots/screenshot.png https://www.google.com/'
+
+                }
+
+            }
+
+        }
+
+
 
 post {
    always{
