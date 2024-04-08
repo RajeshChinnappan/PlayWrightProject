@@ -7,7 +7,7 @@ pipeline {
             bat 'npx playwright test'
          }
        }
-  }
+  
 stage('Take Screenshot') {
 
             steps {
@@ -22,8 +22,9 @@ stage('Take Screenshot') {
 
             }
 
-        }
 
+        }
+}
 
 
 post {
