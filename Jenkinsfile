@@ -20,7 +20,7 @@ post {
          
 emailext (
 
-                    to: 'recipient@example.com',
+                    to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',
 
                     subject: 'Build Notification with HTML Report Screenshot',
 
@@ -76,7 +76,7 @@ emailext (
         // echo html_body
         //  emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       //    emailext(attachmentsPattern:'playwright-report/index.html',body: """<p><a href="${BUILD_URL}/path/to/index.html">HTML Report</a></p>""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
-          emailext(attachmentsPattern:'playwright-report/index.html',body:"""<img src = "C:/Users/rajesh.c/Documents/Playwright/screenshots/screenshot.png" alt = "report" >""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
+        //  emailext(attachmentsPattern:'playwright-report/index.html',body:"""<img src = "C:/Users/rajesh.c/Documents/Playwright/screenshots/screenshot.png" alt = "report" >""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
       }
           
         }
