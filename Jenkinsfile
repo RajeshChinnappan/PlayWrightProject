@@ -12,7 +12,39 @@ pipeline {
 post {
    always{
       script {
+         def reportPath = "${WORKSPACE}/playwright-report/index.html"
+         def crumb = sh(script: "curl -s 'http://localhost:8080/crumbIssuer/api/xml' | grep -oP '(?<=<crumb>).*(?=</crumb>)'", returnStdout: true).trim()
+                def screenshotPath = "${WORKSPACE}/screenshots/screenshot.png"
+
+                sh "chromium-browser --headless --screenshot=${screenshotPath} ${BUILD_URL}/Workspaces/C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/playwright-report/index.html"
          
+emailext (
+
+                    to: 'recipient@example.com',
+
+                    subject: 'Build Notification with HTML Report Screenshot',
+
+                    body: """<p>Dear User,</p>
+
+                            <p>The build is complete. Here is the HTML report screenshot:</p>
+
+                            <p><img src='cid:report-screenshot'></p>""",
+
+                    mimeType: 'text/html',
+
+                    replyTo: '$DEFAULT_RECIPIENTS',
+
+                    attachmentsPattern: screenshotPath,
+
+                    attachLog: true,
+
+                    headers: [
+
+                        [name: 'Jenkins-Crumb', value: crumb]
+
+                    ]
+
+                )
 
          // allure ([
          //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
