@@ -12,6 +12,7 @@ pipeline {
 post {
    always{
       script {
+         
 
          // allure ([
          //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
@@ -41,7 +42,8 @@ post {
             //     echo 'screenshot.png'
       // emailext(subject: "Subject",to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com',mimeType: 'text/html',body: "${html_body}")
         // echo html_body
-         // emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+        //  emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
+          emailext(attachmentsPattern:'<p><iframe src="playwright-report/index.html" width="100%" height="600"></iframe></p>',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       }
           
         }
