@@ -85,4 +85,14 @@ describe("Add prouducts to cart and Place order", () => {
     //     expect(productDeleteLinks).toHaveCount(0);
     // })
 
+    test("Verify user is able to delete the added products in cart", async function () {
+         
+        
+
+        await page.goto('C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/playwright-report/index.html');
+        await page.screenshot({ path: 'screenshots/screenshot.png', fullPage: true });
+
+
 })
+
+});
