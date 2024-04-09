@@ -82,9 +82,9 @@ post {
 
 //                 )
 
-         // allure ([
-         //    includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
-         // ])
+         allure ([
+            includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
+         ])
         // def reportPath = "C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html";
        //  def reportPath = "${WORKSPACE}/playwright-report/index.html"
 
