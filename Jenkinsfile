@@ -37,7 +37,7 @@ post {
                 def htmlContent = readFile(htmlFilePath).trim()
                 echo "HTML Content: ${htmlContent}"
  
-                emailext (to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: '${FILE, path="$WORKSPACE/playwright-report/index.html"}',replyTo: '$DEFAULT_RECIPIENTS')
+                emailext (to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: "${FILE, path= ${htmlFilePath}}",replyTo: '$DEFAULT_RECIPIENTS')
 
     //attachmentsPattern: '**/index.html', // Assuming the HTML file is named index.html
 
