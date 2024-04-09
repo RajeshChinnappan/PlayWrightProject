@@ -32,27 +32,13 @@ post {
 
                 def htmlContent = readFile("${WORKSPACE}/playwright-report/index.html").trim()
 
-                emailext (
-
-    to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com'',
-
-    subject: 'Build Notification with HTML Report',
-
-    body: """<p>Dear User,</p>
-
-<p>The build is complete. Here is the HTML report:</p>
-
-<p>${readFile('index.html')}</p>""",
-
-    mimeType: 'text/html',
-
-    replyTo: '$DEFAULT_RECIPIENTS',
+                emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p>${readFile('index.html')}</p>""",mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
 
     //attachmentsPattern: '**/index.html', // Assuming the HTML file is named index.html
 
     //compressAttachments: true // Compress the attached HTML file
 
-)
+
 
 
      //    def reportPath = "${WORKSPACE}/playwright-report/index.html"
@@ -119,7 +105,7 @@ post {
         // echo html_body
         //  emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       //    emailext(attachmentsPattern:'playwright-report/index.html',body: """<p><a href="${BUILD_URL}/path/to/index.html">HTML Report</a></p>""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
-          emailext(attachmentsPattern:'screenshots/screenshot.png',body:"""<img src = "C:/Users/rajesh.c/Documents/Playwright/screenshots/screenshot.png" alt = "report" >""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
+        //  emailext(attachmentsPattern:'screenshots/screenshot.png',body:"""<img src = "C:/Users/rajesh.c/Documents/Playwright/screenshots/screenshot.png" alt = "report" >""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
       }
           
         }
