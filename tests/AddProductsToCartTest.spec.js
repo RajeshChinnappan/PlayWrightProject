@@ -88,8 +88,7 @@ describe("Add prouducts to cart and Place order", () => {
     test("Verify user is able to delete the added products in cart", async function () {
          
         
-
-        await page.goto('C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/playwright-report/index.html');
+        await page.goto('C:/Users/rajesh.c/.jenkins/workspace/PlaywrightProjectEndToEndTesting/allure-report/index.html');
         await page.screenshot({ path: 'screenshots/screenshot.png', fullPage: true });
 
 
