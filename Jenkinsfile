@@ -8,21 +8,21 @@ pipeline {
          }
        }
   
-stage('Take Screenshot') {
-            steps {
-                script {
-                              // Download and install Chromium for Windows
-            bat 'choco install chromium'
+// stage('Take Screenshot') {
+//             steps {
+//                 script {
+//                               // Download and install Chromium for Windows
+//             bat 'choco install chromium'
             
-            // Take screenshot using Chromium
-            bat "start /WAIT /B chromium --headless --disable-gpu --screenshot=${WORKSPACE}\\screenshots\\screenshot.png https://www.google.com/"
+//             // Take screenshot using Chromium
+//             bat "start /WAIT /B chromium --headless --disable-gpu --screenshot=${WORKSPACE}\\screenshots\\screenshot.png https://www.google.com/"
 
-                                    }
+//                                     }
 
-            }
+//             }
 
 
-        }
+//         }
 }
 
 
