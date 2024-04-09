@@ -9,16 +9,13 @@ pipeline {
        }
   
 stage('Take Screenshot') {
-
             steps {
-
                 script {
                               // Download and install Chromium for Windows
             bat 'choco install chromium'
             
             // Take screenshot using Chromium
             bat "start /WAIT /B chromium --headless --disable-gpu --screenshot=${WORKSPACE}\\screenshots\\screenshot.png https://www.google.com/"
-
 
                                     }
 
@@ -32,6 +29,32 @@ stage('Take Screenshot') {
 post {
    always{
       script {
+
+                def htmlContent = readFile("${WORKSPACE}/playwright-report/index.html").trim()
+
+                emailext (
+
+    to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com'',
+
+    subject: 'Build Notification with HTML Report',
+
+    body: """<p>Dear User,</p>
+
+<p>The build is complete. Here is the HTML report:</p>
+
+<p>${readFile('index.html')}</p>""",
+
+    mimeType: 'text/html',
+
+    replyTo: '$DEFAULT_RECIPIENTS',
+
+    //attachmentsPattern: '**/index.html', // Assuming the HTML file is named index.html
+
+    //compressAttachments: true // Compress the attached HTML file
+
+)
+
+
      //    def reportPath = "${WORKSPACE}/playwright-report/index.html"
        //  def crumb = sh(script: "curl -s 'http://localhost:8080/crumbIssuer/api/xml' | grep -oP '(?<=<crumb>).*(?=</crumb>)'", returnStdout: true).trim()
          //       def screenshotPath = "${WORKSPACE}/ws/screenshots/screenshot.png"
