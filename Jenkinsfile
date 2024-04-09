@@ -38,7 +38,7 @@ post {
                 def htmlContent = readFile("${WORKSPACE}/playwright-report/index.html").trim()
                 echo htmlContent;
 
-              //  emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p>${readFile(htmlContent)}</p>""",mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
+                emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p> ${htmlContent}"}</p>""",mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
 
     //attachmentsPattern: '**/index.html', // Assuming the HTML file is named index.html
 
