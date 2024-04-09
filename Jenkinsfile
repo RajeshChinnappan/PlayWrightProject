@@ -39,7 +39,7 @@ post {
 
               //  emailext ( attachmentsPattern: "${htmlContent}", to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: "${htmlContent}", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
 
-                emailext ( body: '${FILE, path="${WORKSPACE}/playwright-report/index.html"}', mimeType: 'text/html', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',replyTo: '$DEFAULT_RECIPIENTS')
+                emailext ( body: '${FILE, path="playwright-report/index.html"}', mimeType: 'text/html', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',replyTo: '$DEFAULT_RECIPIENTS')
 
     //attachmentsPattern: '**/index.html', // Assuming the HTML file is named index.html
 
