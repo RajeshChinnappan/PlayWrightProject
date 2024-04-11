@@ -44,7 +44,7 @@ module.exports = defineConfig({
   //One worker is assigned to one spec file while running parrllel
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
  // reporter: 'html',
-  reporter: [['html'],['json', { outputFile: 'results.json' }],['junit', { outputFile: 'results.xml' }],
+  reporter: [['html',{outputFolder: 'html-report'}],['json', { outputFile: 'results.json' }],['junit', { outputFile: 'results.xml' }],
              ['allure-playwright', {outputFolder: 'allure-results'}]],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */

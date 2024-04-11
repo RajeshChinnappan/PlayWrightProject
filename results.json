@@ -1,0 +1,275 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\rajesh.c\\Documents\\Playwright\\playwright.config.js",
+    "rootDir": "C:/Users/rajesh.c/Documents/Playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
+        "C:\\Users\\rajesh.c\\Documents\\Playwright\\node_modules\\allure-playwright\\dist\\index.js",
+        {
+          "outputFolder": "allure-results"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/rajesh.c/Documents/Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/rajesh.c/Documents/Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.42.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "AddProductsToCartAPITest.spec.js",
+      "file": "AddProductsToCartAPITest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user is able to add products to carts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1028,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "URL https://api.demoblaze.com/addtocart\n"
+                    },
+                    {
+                      "text": "{\n  id: \u001b[32m'419168b6-3e91-2132-b1a7-5b61207febd3'\u001b[39m,\n  cookie: \u001b[32m'dGVzdHVzZXI5OTk0MTE3MDcxMDg='\u001b[39m,\n  prod_id: \u001b[33m1\u001b[39m,\n  flag: \u001b[33mtrue\u001b[39m\n}\n"
+                    },
+                    {
+                      "text": "{\n  id: \u001b[32m'829bc3a8-5f23-4ea8-72dd-baf0b36bbff7'\u001b[39m,\n  cookie: \u001b[32m'dGVzdHVzZXI5OTk0MTE3MDcxMDg='\u001b[39m,\n  prod_id: \u001b[33m2\u001b[39m,\n  flag: \u001b[33mtrue\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-11T07:46:39.548Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\rajesh.c\\Documents\\Playwright\\test-results\\AddProductsToCartAPITest-Verify-user-is-able-to-add-products-to-carts-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4a1f708eb22bde9e976-2fd7a6fc0f4bf871814e",
+          "file": "AddProductsToCartAPITest.spec.js",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "Verify user is able to delete products from cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 962,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "URL https://api.demoblaze.com/addtocart\n"
+                    },
+                    {
+                      "text": "{\n  id: \u001b[32m'419168b6-3e91-2132-b1a7-5b61207febd3'\u001b[39m,\n  cookie: \u001b[32m'dGVzdHVzZXI5OTk0MTE3MDcxMDg='\u001b[39m,\n  prod_id: \u001b[33m1\u001b[39m,\n  flag: \u001b[33mfalse\u001b[39m\n}\n"
+                    },
+                    {
+                      "text": "{\n  id: \u001b[32m'829bc3a8-5f23-4ea8-72dd-baf0b36bbff7'\u001b[39m,\n  cookie: \u001b[32m'dGVzdHVzZXI5OTk0MTE3MDcxMDg='\u001b[39m,\n  prod_id: \u001b[33m2\u001b[39m,\n  flag: \u001b[33mfalse\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-11T07:46:40.632Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\rajesh.c\\Documents\\Playwright\\test-results\\AddProductsToCartAPITest-Verify-user-is-able-to-delete-products-from-cart-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c4a1f708eb22bde9e976-4152203bd08bb33e255a",
+          "file": "AddProductsToCartAPITest.spec.js",
+          "line": 26,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "AddProductsToCartTest.spec.js",
+      "file": "AddProductsToCartTest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user is able to log into app",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 2282,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "buffer": "4pyUIEFkZCBwcm91ZHVjdHMgdG8gY2FydCBhbmQgUGxhY2Ugb3JkZXIgKDAuNzAyNG1zKQo="
+                    },
+                    {
+                      "text": "\u001b[35m2024-04-11T07:46:42.159Z\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-11T07:46:40.343Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\rajesh.c\\Documents\\Playwright\\test-results\\AddProductsToCartTest-Verify-user-is-able-to-log-into-app-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1db105b89149b06856e2-13451547c8e9741adf51",
+          "file": "AddProductsToCartTest.spec.js",
+          "line": 44,
+          "column": 5
+        },
+        {
+          "title": "Verify user is able to delete the added products in cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 921,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-04-11T07:46:44.618Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\rajesh.c\\Documents\\Playwright\\test-results\\AddProductsToCartTest-Verify-user-is-able-to-delete-the-added-products-in-cart-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1db105b89149b06856e2-746c703c7798464b50b6",
+          "file": "AddProductsToCartTest.spec.js",
+          "line": 88,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-04-11T07:46:37.626Z",
+    "duration": 8443.405999999999,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
