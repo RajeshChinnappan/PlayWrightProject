@@ -30,9 +30,9 @@ post {
    always{
       script {
 
-        allure ([
-            includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
-         ])
+        // allure ([
+        //     includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
+        //  ])
 
               //  def htmlContent = readFile("${WORKSPACE}/allure-report/index.html").trim()
               //  def htmlContent = readFile(" ${Allure Report}").trim()
