@@ -30,7 +30,8 @@ post {
    always{
       script {
 
-               def htmlContent = readFile("${WORKSPACE}/playwright-report/index.html").trim()
+               def htmlContent = readFile("${WORKSPACE}/index.html").trim()
+               echo htmlContent
  
             //   def htmlFilePath = "${WORKSPACE}/playwright-report/index.html"
              //  echo "HTML File Path: ${htmlFilePath}"
