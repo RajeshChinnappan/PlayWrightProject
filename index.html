@@ -1,33 +1,97 @@
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Allure Report</title>
-    <link rel="favicon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="plugin/screen-diff/styles.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sample Report</title>
+
+<style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+        }
+
+        table {
+
+            border-collapse: collapse;
+
+            width: 100%;
+
+        }
+
+        th, td {
+
+            border: 1px solid #dddddd;
+
+            text-align: left;
+
+            padding: 8px;
+
+        }
+
+        th {
+
+            background-color: #f2f2f2;
+
+        }
+
+        tr:nth-child(even) {
+
+            background-color: #f2f2f2;
+
+        }
+
+</style>
+
 </head>
+
 <body>
-    <div id="alert"></div>
-    <div id="content">
-        <span class="spinner">
-            <span class="spinner__circle"></span>
-        </span>
-    </div>
-    <div id="popup"></div>
-    <script src="app.js"></script>
-    <script src="plugin/behaviors/index.js"></script>
-    <script src="plugin/packages/index.js"></script>
-    <script src="plugin/screen-diff/index.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWC4GKEYS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-FVWC4GKEYS', {
-          'allureVersion': 'dev',
-          'reportUuid': 'c3ab3994-ecae-4fe2-b9ca-ef7bac6146b6',
-          'single_file': false
-        });
-    </script>
+ 
+<h2>Sample Report</h2>
+ 
+<table>
+
+<tr>
+
+<th>Test Case</th>
+<script>
+    console.log("rajesh")
+</script>
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Test Case 1</td>
+
+<td>Passed</td>
+
+</tr>
+
+<tr>
+
+<td>Test Case 2</td>
+
+<td>Failed</td>
+
+</tr>
+
+<tr>
+
+<td>Test Case 3</td>
+
+<td>Passed</td>
+
+</tr>
+
+</table>
+ 
 </body>
+
 </html>
