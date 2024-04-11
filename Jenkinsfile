@@ -34,7 +34,7 @@ post {
         //     includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
         //  ])
 
-              //  def htmlContent = readFile("${WORKSPACE}/allure-report/index.html").trim()
+                def htmlContent = readFile "${WORKSPACE}/playwright-report/index.html"
               //  def htmlContent = readFile(" ${Allure Report}").trim()
               //  echo htmlContent
 
@@ -42,14 +42,13 @@ post {
             //   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
  
             //   def htmlFilePath = "${WORKSPACE}/playwright-report/index.html"
-               def htmlFilePath = "playwright-report/index.html"
              //  echo "HTML File Path: ${htmlFilePath}"
 
              //   def htmlContent = readFile(htmlFilePath).trim()
               //  echo "HTML Content: ${htmlContent}"
 
-            //   emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p>${readFile('results.xml')}</p>""", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
-                emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body:  " \ ${FILE,path= \ "${htmlFilePath} \ "}", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
+               emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p>${htmlContent}</p>""", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
+               
 
              //   emailext ( mimeType: 'text/html', body: '${FILE, path="playwright-report/index.html"}', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',replyTo: '$DEFAULT_RECIPIENTS')
 
