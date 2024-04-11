@@ -37,7 +37,7 @@ post {
                 def htmlContent = readFile(htmlFilePath).trim()
               //  echo "HTML Content: ${htmlContent}"
 
-              //  emailext ( attachmentsPattern: "${htmlContent}", to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: "${htmlContent}", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
+               emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: "${htmlContent}", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
 
              //   emailext ( mimeType: 'text/html', body: '${FILE, path="playwright-report/index.html"}', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',replyTo: '$DEFAULT_RECIPIENTS')
 
@@ -82,9 +82,11 @@ post {
 
 //                 )
 
-         allure ([
-            includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
-         ])
+//http://localhost:8080/job/PlaywrightProjectEndToEndTesting/119/allure/
+
+        //  allure ([
+        //     includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
+        //  ])
         // def reportPath = "C:\\Users\\rajesh.c\\.jenkins\\workspace\\PlaywrightProjectEndToEndTesting\\playwright-report\\index.html";
        //  def reportPath = "${WORKSPACE}/playwright-report/index.html"
 
