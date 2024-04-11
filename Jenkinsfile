@@ -34,8 +34,10 @@ post {
             includeProperties: false, jdk: '', results: [[path: 'allure-results']]   
          ])
 
-               def htmlContent = readFile("${WORKSPACE}/index.html").trim()
+              //  def htmlContent = readFile("${WORKSPACE}/allure-report/index.html").trim()
+               def htmlContent = readFile(" ${BUILD_URL}/allure-report/index.html").trim()
                echo htmlContent
+
 
             //   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
  
