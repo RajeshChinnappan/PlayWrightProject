@@ -30,14 +30,15 @@ post {
    always{
       script {
 
-                
-               def htmlFilePath = "${WORKSPACE}/playwright-report/index.html"
-               echo "HTML File Path: ${htmlFilePath}"
+               def htmlContent = readFile("${WORKSPACE}/playwright-report/index.html").trim()
+ 
+            //   def htmlFilePath = "${WORKSPACE}/playwright-report/index.html"
+             //  echo "HTML File Path: ${htmlFilePath}"
 
-                def htmlContent = readFile(htmlFilePath).trim()
+             //   def htmlContent = readFile(htmlFilePath).trim()
               //  echo "HTML Content: ${htmlContent}"
 
-               emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: "${htmlContent}", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
+               emailext ( to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report', body: """<p>Dear User,</p><p>The build is complete. Here is the HTML report:</p><p>${readFile('index.html')}</p>""", mimeType: 'text/html',replyTo: '$DEFAULT_RECIPIENTS')
 
              //   emailext ( mimeType: 'text/html', body: '${FILE, path="playwright-report/index.html"}', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com', subject: 'Build Notification with HTML Report',replyTo: '$DEFAULT_RECIPIENTS')
 
@@ -114,7 +115,7 @@ post {
         // echo html_body
         //  emailext(attachmentsPattern:'playwright-report/index.html',body: '', subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com')
       //    emailext(attachmentsPattern:'playwright-report/index.html',body: """<p><a href="${BUILD_URL}/path/to/index.html">HTML Report</a></p>""", mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
-          emailext(attachmentsPattern:'screenshots/screenshot.png',body: 'screenshots/screenshot.png' , mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
+        //  emailext(attachmentsPattern:'screenshots/screenshot.png',body: 'screenshots/screenshot.png' , mimeType: 'text/html',subject: 'PlaywrightReport', to: 'playwrightdemotesting@gmail.com,rajesh.c@reflectionsinfos.com,rajeshc2391@gmail.com')
       }
           
         }
