@@ -32,6 +32,8 @@ post {
 
                def htmlContent = readFile("${WORKSPACE}/index.html").trim()
                echo htmlContent
+
+               publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
  
             //   def htmlFilePath = "${WORKSPACE}/playwright-report/index.html"
              //  echo "HTML File Path: ${htmlFilePath}"
